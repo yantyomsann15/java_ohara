@@ -1,3 +1,4 @@
+package text;
 import java.util.Scanner;
 class IsoscelesTriangle {
     public static void main(String[] args) {
