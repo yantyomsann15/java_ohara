@@ -1,30 +1,21 @@
-abstract class Person {
-    String name;
-    String job;
-
-    // 抽象メソッド introduce
-    public abstract void introduce();
-
-    // コンストラクタ
-    Person(String n, String j) {
-        name = n;
-        job = j;
-    }
+interface Person {
+    void introduce();
 }
 
-class Teacher extends Person {
-    String subject;
+class Teacher implements Person {
+    private String name;
+    private String job;
+    private String subject;
+
 
     // コンストラクタ
-    Teacher(String n, String j, String s) {
+    Teacher(String n, String s, String j) {
         // super();でPersonクラスのコンストラクタの呼び出し
-        super(n, j);
-        // subjectのコンストラクタ
         this.subject = s;
+        this.job = j;
+        this.name = n;
     }
 
-    // 抽象メソッドを実装
-    @Override
     public void introduce() {
         System.out.println("氏名：" + name);
         System.out.println("職種：" + job);
@@ -33,19 +24,19 @@ class Teacher extends Person {
     }
 }
 
-class Cook extends Person {
-    String specialties;
+class Cook implements Person {
+    private String name;
+    private String job;
+    private String specialties;
 
     // コンストラクタ
     Cook(String n, String j, String s) {
         // super();でPersonクラスのコンストラクタの呼び出し
-        super(n, j);
-        // specialtiesのコンストラクタ
+        this.job = j;
+        this.name = n;
         this.specialties = s;
     }
 
-    // 抽象メソッドを実装
-    @Override
     public void introduce() {
         System.out.println("氏名：" + name);
         System.out.println("職種：" + job);
@@ -54,7 +45,7 @@ class Cook extends Person {
     }
 }
 
-public class En1 {
+public class En3 {
     public static void main(String[] args) {
         Teacher teacher = new Teacher("竹井一馬", "教員", "情報処理");
         Cook cook = new Cook("大原太郎", "シェフ", "オムライス");
