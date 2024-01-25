@@ -30,6 +30,7 @@ class Teacher extends Person{
         System.out.println("氏名：" + name);
         System.out.println("職種：" + job);
         System.out.println("担当教科：" + subject);
+        System.out.println("");
     }
 }
 
@@ -47,6 +48,7 @@ class Cook extends Person{
         System.out.println("氏名：" + name);
         System.out.println("職種：" + job);
         System.out.println("得意料理：" + specialties);
+        System.out.println("");
     }
 }
 
