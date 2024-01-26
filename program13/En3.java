@@ -1,15 +1,15 @@
-interface Person {
+interface Person3 {
     void introduce();
 }
 
-class Teacher implements Person {
+class Teacher3 implements Person3 {
     private String name;
     private String job;
     private String subject;
 
 
     // コンストラクタ
-    Teacher(String n, String s, String j) {
+    Teacher3(String n, String s, String j) {
         // super();でPersonクラスのコンストラクタの呼び出し
         this.subject = s;
         this.job = j;
@@ -24,13 +24,13 @@ class Teacher implements Person {
     }
 }
 
-class Cook implements Person {
+class Cook3 implements Person3 {
     private String name;
     private String job;
     private String specialties;
 
     // コンストラクタ
-    Cook(String n, String j, String s) {
+    Cook3(String n, String j, String s) {
         // super();でPersonクラスのコンストラクタの呼び出し
         this.job = j;
         this.name = n;
@@ -47,8 +47,8 @@ class Cook implements Person {
 
 public class En3 {
     public static void main(String[] args) {
-        Teacher teacher = new Teacher("竹井一馬", "教員", "情報処理");
-        Cook cook = new Cook("大原太郎", "シェフ", "オムライス");
+        Teacher3 teacher = new Teacher3("竹井一馬", "教員", "情報処理");
+        Cook3 cook = new Cook3("大原太郎", "シェフ", "オムライス");
 
         teacher.introduce();
         cook.introduce();
