@@ -11,11 +11,8 @@ public class En1 {
         int num1 = scanner.nextInt();
         System.out.print("整数2 = ");
         int num2 = scanner.nextInt();
-        if (num2 == 0) {
-            throw new ArithmeticException();
-        }
         // 少数の表示
-        double result = (double)num1 / num2;
+        int result = num1 / num2;
         System.out.println(num1 + " / " + num2 + " = " + result);
         // ０で割られたとき
         } catch (ArithmeticException e) {
