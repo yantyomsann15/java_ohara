@@ -13,11 +13,6 @@ public class En14 {
         Seasons.put("ハクサイ:", "冬");
 
         for (Map.Entry<String, String> entry : Seasons.entrySet()) {
-            if ("季節".equals(entry.getValue()))
-            System.out.println(entry.getKey() +  entry.getValue());
-        }
-        for (Map.Entry<String, String> entry : Seasons.entrySet()) {
-            if ("春".equals(entry.getValue()))
             System.out.println(entry.getKey() +  entry.getValue());
         }
         
